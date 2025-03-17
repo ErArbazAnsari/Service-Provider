@@ -1,0 +1,66 @@
+/* Custom Scrollbar Styles */
+
+/* For Webkit Browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px;
+  /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  /* Track color */
+  border-radius: 10px;
+  /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  /* Thumb color */
+  border-radius: 10px;
+  /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+  /* Thumb color on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  /* Thin scrollbar */
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  /* Thumb and track color */
+}
+
+/* For Edge and Internet Explorer */
+body {
+  -ms-overflow-style: none;
+  /* Hide scrollbar in IE and Edge */
+}
+
+/* Hide scrollbar in IE and Edge */
+body::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar */
+}
+
+/* Light Mode Variables */
+:root {
+  --scrollbar-track: #f1f1f1;
+  /* Light mode track color */
+  --scrollbar-thumb: #888;
+  /* Light mode thumb color */
+  --scrollbar-thumb-hover: #555;
+  /* Light mode thumb color on hover */
+}
+
+/* Dark Mode Variables */
+[data-theme='dark'] {
+  --scrollbar-track: #2e2e2e;
+  /* Dark mode track color */
+  --scrollbar-thumb: #555;
+  /* Dark mode thumb color */
+  --scrollbar-thumb-hover: #333;
+  /* Dark mode thumb color on hover */
+}
