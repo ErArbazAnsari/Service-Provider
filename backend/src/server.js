@@ -26,7 +26,7 @@ app.use(express.json());
 // app.use(errorMiddleware);
 
 // All Routers
-app.app.get("/", (req, res) => {
+app.get("/", (req, res) => {
     res.send("GET request to the homepage");
 });
 
