@@ -12,16 +12,8 @@ const adminRoute = require("./routers/admin-router");
 const cors = require("cors");
 // const errorMiddleware = require("./middlewares/error-middleware");
 
-// working on cors
-const corsOptions = {
-    origin: process.env.FRONTEND_URI,
-    methods: "GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS",
-    credentials: true,
-    optionsSuccessStatus: 200,
-};
-
+app.use(cors());
 app.use(express.static("dist"));
-app.use(cors(corsOptions));
 app.use(express.json());
 // app.use(errorMiddleware);
 
